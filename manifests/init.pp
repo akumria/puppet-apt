@@ -2,7 +2,7 @@
 
 class apt {
 	$root = '/etc/apt'
-	$provider = 'apt-get'
+	$provider = '/usr/bin/apt-get'
 	
 	file { "sources.list":
 		name => "${root}/sources.list",
