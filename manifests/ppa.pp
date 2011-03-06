@@ -1,9 +1,5 @@
 # ppa.pp
 
-package { "python-software-properties":
-	ensure => installed
-}
-
 define apt::ppa(
 	
 ) {
