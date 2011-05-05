@@ -8,7 +8,6 @@ define apt::ppa(
 	exec { "/usr/bin/add-apt-repository ${name}":
 		require => Package["python-software-properties"],
 		# TODO: unless => 'check'
-		notify => Exec['apt_update'],
 	}
 }
 
