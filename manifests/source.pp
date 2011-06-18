@@ -41,8 +41,8 @@ define apt::source(
 	}
 	
 	if $key != false {
-		exec { "apt-key adv --keyserver ${key_server} --recv-keys ${key}":
-			unless => "apt-key list | grep ${key}",
+		exec { "/usr/bin/apt-key adv --keyserver ${key_server} --recv-keys ${key}":
+			unless => "/usr/bin/apt-key list | /bin/grep ${key}",
 			before => File["${name}.list"],
 		}
 	}
